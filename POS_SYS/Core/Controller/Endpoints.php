@@ -4,8 +4,8 @@ namespace Core\Controller;
 
 use Core\Base\Controller;
 use Core\Helpers\Tests;
-use Core\Model\Post;
 use Core\Model\Transaction;
+use Core\Model\Item;
 use Exception;
 
 class Endpoints extends Controller
@@ -44,22 +44,22 @@ class Endpoints extends Controller
         {
                 self::check_if_empty($this->request_body);
                 try {
-                        $post = new Post;
+                        $item = new Item;
                         $item_id = $this->request_body->item_input_id;
-                        $current_item = $post->get_by_id($item_id);
+                        $current_item = $item->get_by_id($item_id);
                         // var_dump($current_item);
                         // die;
                         $total=($this->request_body->quantity)*($current_item->silling_price);
                         $create_transaction = array(
-                                "post_id" => $current_item->id,
-                                "post_name"=>$current_item->name,
+                                "item_id" => $current_item->id,
+                                "item_name"=>$current_item->name,
                                 "quantity"=>$this->request_body->quantity,
                                 "price"=>$current_item->silling_price,
                                 "cost"=>$current_item->cost,
                                 "total"=>$total
                         );
-                        $tag = new Transaction;
-                        $tag->create($create_transaction);
+                        $transaction = new Transaction;
+                        $transaction->create($create_transaction);
                        
                         $this->response_schema['message_code'] = "post_created_successfuly";
                 } catch (\Exception $error) {

@@ -19,23 +19,21 @@ $(function () {
 
                         <td class="text-center">${element.id}</td>
 
-                        <td class="text-center">${element.post_id}</td>
-                        <td class="text-center">${element.post_name}</td>
+                        <td class="text-center">${element.item_id}</td>
+                        <td class="text-center">${element.item_name}</td>
 
                         
                         <td class="text-center"><input  type="number" data-id=input${element.id} name=input${element.id} value=${element.quantity} style="
-
-                        background-color: white;
 
                        width: 5rem;
 
                       border: none;
 
-                        background-color: white;" class="text-center"></td>
+                        background-color: #ffffff00;" class="text-center"></td>
                         <input type="hidden" name='price'data-id=price${element.id} value=${element.price}>
-                        <td class="text-center">${element.price}</td>
+                        <td class="text-center" >${element.price}</td>
                         <td class="text-center">${element.total}</td>
-                        <td class="text-center">${element.created_at}</td>
+                        <td class="text-center" >${element.created_at}</td>
 
                         <td class="text-center">${element.updated_at}</td>
 
@@ -146,8 +144,8 @@ $(function () {
 
                     <td class="text-center">${element.id}</td>
 
-                    <td class="text-center">${element.post_id}</td>
-                    <td class="text-center">${element.post_name}</td>
+                    <td class="text-center">${element.item_id}</td>
+                    <td class="text-center">${element.item_name}</td>
 
                    
                     <td class="text-center"><input  type="number" data-id=input${element.id} name=input${element.id} value=${element.quantity} style="

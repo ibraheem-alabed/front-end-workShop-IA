@@ -1,7 +1,7 @@
 body {
     height: 100vh;
     /* color: rgb(255, 0, 0); */
-    background-image: url("../img/04_supermarket.jpg");
+    background-image: url("../img/79.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -23,12 +23,13 @@ footer * {
 .admin-view #admin-area {
     min-height: 100vh;
     background-color: #f3f3f38c;
-    /* background-image: url("../img/26.gif"); */
+    background-image: url("../img/26.gif");
     background-color: white;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     color: #000000;
+    /* width: 100%; */
     /* z-index: index;
     opacity: 0.7; */
 }
@@ -64,6 +65,21 @@ footer * {
     opacity: .7;
     transform:scale(1.1) rotate(3deg);
 }
+/* ------------- */
+#asd{
+height: 66%;
+width:35rem;
+margin: auto;
+color:whitesmoke;
+backdrop-filter: blur(16px) saturate(180%);
+-webkit-backdrop-filter: blur(16px) saturate(180%);
+background-color: rgba(41, 60, 152, 0.66);
+border-radius: 12px;
+border: 2px solid rgba(255, 255, 255, 0.125);
+padding: 20px 25px;
+}
+
+/* ................. */
 
     div .login{
         position: absolute;
@@ -71,7 +87,7 @@ footer * {
         left:50%;
         transform: translate(-50%,-50%);
         width: 600px;
-        background-image: url("../img/30.gif");
+        background-image: url("../img/98.gif");
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
@@ -174,3 +190,14 @@ footer * {
             }
 
 
+        /* @media screen and (max-width: 800px) {
+            #table_transaction {
+                display: flex;
+                flex-direction:column ;
+                justify-content: center;
+                align-items: center;
+            }
+            } */
+
+
+/* ------------------------------------------- */

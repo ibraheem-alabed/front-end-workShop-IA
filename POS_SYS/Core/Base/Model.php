@@ -78,8 +78,8 @@ class Model
             switch ($key) {
                 case 'id':
                 case 'user_id':
-                case 'post_id':
-                case 'tag_id':
+                case 'item_id':
+                case 'transaction_id':
                     $data_types .= "i";
                     break;
 
@@ -131,7 +131,7 @@ class Model
         $servername = "127.0.0.1:3307";
         $username = "root";
         $password = "";
-        $database = "c9php_cms1";
+        $database = "pos";
 
         // Create connection
         $this->connection = new \mysqli($servername, $username, $password, $database);

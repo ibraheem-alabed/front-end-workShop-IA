@@ -2,9 +2,9 @@
 namespace Core\Controller;
 use Core\Base\Controller;
 use Core\Helpers\Tests;
-use Core\Model\Post;
 use Core\Model\Transaction;
 use Core\Model\User;
+use Core\Model\Item;
 class Dashboards extends Controller
 {
     use Tests;
@@ -17,9 +17,9 @@ class Dashboards extends Controller
     public function index()
     {
         $this->view="dashboard";
-        $post = new Post; // new model items.
-        $this->data['post'] = $post->get_all();
-        $this->data['posts_count'] = count($post->get_all());
+        $item = new Item; // new model items.
+        $this->data['item'] = $item->get_all();
+        $this->data['items_count'] = count($item->get_all());
         $this->permissions(['post:read']);
         // $transaction = new Transaction; // new model items.
         // $this->data['transactions'] = $transaction->get_all();

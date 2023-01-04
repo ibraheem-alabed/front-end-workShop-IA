@@ -13,9 +13,15 @@ class User extends Model
         "tag:read", "tag:create", "tag:update", "tag:delete"
     );
 
-    const EDITOR = array(
+    const SELLER = array(
+        "tag:create",
+    );
+    const PROCUREMENT = array(
         "post:read", "post:create", "post:update",
-        "tag:read", "tag:create", "tag:update"
+        "post:delete"
+    );
+    const ACCOUNTANT = array(
+        "tag:read", "tag:update", "tag:delete"
     );
 
 

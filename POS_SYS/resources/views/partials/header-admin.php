@@ -1,6 +1,7 @@
 <?php
 
-use Core\Helpers\Helper; ?>
+use Core\Helpers\Helper;
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -45,10 +46,11 @@ use Core\Helpers\Helper; ?>
 
 <body class="admin-view">
 
-    <nav class="navbar  navbar-expand-lg" style="background-color: #29428ae3;">
+    <nav class="navbar  navbar-expand-lg" style="background-color: #29428af7;">
         <div class="container-fluid">
             <i class="fa-solid fa-cash-register"></i>
             <a class="navbar-brand" href="/">HTU-store</a>
+            <!-- <img src="<?= $data->user->image   ?>" alt="profail img" style="width: 50px; height: 50px;"> -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -66,33 +68,33 @@ use Core\Helpers\Helper; ?>
         </div>
     </nav>
     
-    <div id="admin-area" class="row">
+    <div id="admin-area" class="row flex-row-reverse">
         <div class="col-2 admin-links">
-            <ul class="list-group list-group-flush mt-3">
+            <ul class="list-group list-group-flush mt-3 ">
                 <?php if (Helper::check_permission(['post:read'])) : ?>
                     <li class="list-group-item  d-flex justify-content-center align-items-center">
                         <i class="fa-solid fa-shop"></i>
-                        <a href="/posts">All itams</a>
+                        <a href="/items">All itams</a>
                     </li>
                 <?php endif;
                 if (Helper::check_permission(['post:create'])) :
                 ?>
                     <li class="list-group-item d-flex justify-content-center align-items-center">
                         <i class="fa-solid fa-square-plus"></i>
-                        <a href="/posts/create">Create items</a>
+                        <a href="/items/create">Create items</a>
                     </li>
                 <?php endif;
                 if (Helper::check_permission(['tag:read'])) : ?>
                     <li class="list-group-item d-flex justify-content-center align-items-center">
                         <i class="fa-brands fa-cc-visa"></i>
-                        <a href="/tags">transactions</a>
+                        <a href="/transactions">add transactions</a>
                     </li>
                 <?php endif;
                 if (Helper::check_permission(['tag:create'])) :
                 ?>
                     <li class="list-group-item d-flex justify-content-center align-items-center">
                         <i class="fa-solid fa-cart-plus"></i>
-                        <a href="/tags/create">add transactions</a>
+                        <a href="/transactions/create">all transactions</a>
                     </li>
                 <?php endif;
                 if (Helper::check_permission(['user:read'])) :
